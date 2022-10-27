@@ -5,6 +5,7 @@
 }
 
 .container {
+    padding: 2rem;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,34 +15,47 @@
 .item {
     float: left;
     width: 700px;
-    height: 300px;
+    height: 500px;
     position: relative;
+    background: #000;
+
 }
 
 .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.6;
 }
 
 .item .text {
+    padding: 1rem;
     position: absolute;
     right: 20px;
     bottom: 20px;
-    text-align: right;
+    text-align: center;
     color: white;
+}
+
+.item .text .title {
+    margin: 0.5rem 0;
 }
 
 .thumbs {
     float: left;
-    height: 300px;
+    height: 500px;
     background: #000;
     position: relative;
 }
 
 .thumb {
-    height: calc((300px) / 5);
+    height: calc((100%) / 5);
     opacity: 0.5;
+    
+}
+
+.thumb:hover {
+    cursor: pointer;
 }
 
 .thumb img {
@@ -51,7 +65,6 @@
 }
 
 .thumb.active {
-    border: 2px solid #ccc;
     opacity: 1;
 }
 
@@ -102,4 +115,31 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     bottom: 35%;
     left: 50%;
     transform: translate(-50%) rotate(135deg);
+}
+
+@media screen and (max-width: 1040px) {
+    .thumbs {
+        display: flex;
+        height: fit-content;
+        width: 700px;
+    }
+    .thumb {
+        flex-grow: 1;
+        height: 80px;
+        width: calc(100%/5);
+       
+    }
+
+    .slider-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .item, .thumbs {
+        width: 100%;
+    }
 }

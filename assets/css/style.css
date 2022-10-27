@@ -135,6 +135,21 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
         flex-direction: column;
         align-items: center;
     }
+
+    .prev {
+        top: 25%;
+        left: 0;
+        rotate: -90deg;
+        transform: translateY(10%) rotate(0deg);
+        
+    }
+
+    .next {
+        top: 25%;
+        left: 100%;
+        rotate: -90deg;
+        transform: translateY(-110%) rotate(0deg);
+    }
 }
 
 
